@@ -172,7 +172,521 @@ button{
 
 }
 
+/* =========================================================
+   RESPONSIVE DESIGN — DESKTOP + TABLET + MOBILE
+========================================================= */
 
+/* ---------- LARGE DESKTOP ---------- */
+
+@media (min-width: 1440px){
+
+    .nav{
+        padding:28px 5vw;
+    }
+
+    .hero{
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+
+    .section{
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+
+    .project{
+        min-height:280px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px){
+
+    .nav{
+        padding:22px 5vw;
+    }
+
+    .nav-links{
+        gap:22px;
+    }
+
+    .hero{
+        padding:
+            125px 5vw 45px;
+    }
+
+    .hero-title{
+        font-size:clamp(70px,13vw,140px);
+    }
+
+    .hero-description{
+        width:330px;
+    }
+
+    .section{
+        padding:
+            110px 5vw;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:55px;
+    }
+
+    .about-stats{
+        grid-template-columns:
+            repeat(2,1fr);
+        gap:35px;
+    }
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo-message{
+        margin-top:35px;
+    }
+
+    .projects-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .projects-description{
+        width:100%;
+        max-width:500px;
+    }
+
+    .project-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .project,
+    .project:nth-child(n){
+        grid-column:span 1;
+        min-height:280px;
+    }
+
+    .skills-heading{
+        font-size:clamp(70px,12vw,125px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px){
+
+    html{
+        font-size:16px;
+    }
+
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .nav{
+        padding:
+            20px 6vw;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+        font-size:9px;
+        letter-spacing:.2em;
+        padding:10px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero{
+        min-height:100svh;
+        padding:
+            110px 6vw 35px;
+    }
+
+    .hero-top{
+        flex-direction:column;
+        gap:25px;
+    }
+
+    .location{
+        text-align:left;
+    }
+
+    .hero-title{
+        font-size:
+            clamp(62px,17vw,115px);
+
+        line-height:.78;
+        letter-spacing:-.1em;
+    }
+
+    .hero-indent{
+        margin-left:8vw;
+    }
+
+    .hero-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:30px;
+    }
+
+    .hero-description{
+        width:100%;
+        max-width:450px;
+        font-size:12px;
+        line-height:1.8;
+    }
+
+    .scroll-label{
+        font-size:8px;
+    }
+
+
+    /* ---------- MARQUEE ---------- */
+
+    .marquee{
+        padding:18px 0;
+    }
+
+    .marquee span{
+        margin-right:45px;
+        font-size:8px;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section{
+        padding:
+            85px 6vw;
+    }
+
+    .section-label{
+        margin-bottom:45px;
+        font-size:8px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about-grid{
+        display:block;
+    }
+
+    .about-title{
+        font-size:
+            clamp(58px,16vw,100px);
+        margin-bottom:50px;
+    }
+
+    .about-main{
+        font-size:
+            clamp(27px,7vw,43px);
+        line-height:1.02;
+    }
+
+    .about-text{
+        margin-top:30px;
+        font-size:13px;
+        line-height:1.8;
+    }
+
+    .about-stats{
+        margin-top:50px;
+        grid-template-columns:
+            repeat(2,1fr);
+        gap:0;
+    }
+
+    .stat{
+        padding:
+            20px 10px 20px 0;
+    }
+
+    .stat-value{
+        font-size:13px;
+    }
+
+
+    /* ---------- PHOTO ---------- */
+
+    .photo-section{
+        padding-top:0;
+    }
+
+    .photo-grid{
+        display:block;
+    }
+
+    .photo{
+        aspect-ratio:4/5;
+    }
+
+    .photo-message{
+        margin-top:35px;
+        font-size:
+            clamp(38px,11vw,65px);
+    }
+
+
+    /* ---------- SKILLS ---------- */
+
+    .skills-heading{
+        font-size:
+            clamp(65px,17vw,110px);
+        line-height:.76;
+    }
+
+    .skills-list{
+        margin-top:70px;
+    }
+
+    .skill-row{
+        padding:20px 0;
+    }
+
+    .skill-row:hover{
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .skill-name{
+        font-size:
+            clamp(24px,7vw,38px);
+    }
+
+
+    /* ---------- PROJECTS ---------- */
+
+    .projects-header{
+        display:block;
+    }
+
+    .projects-title{
+        font-size:
+            clamp(65px,17vw,110px);
+    }
+
+    .projects-description{
+        width:100%;
+        margin-top:35px;
+        font-size:12px;
+    }
+
+
+    /* ---------- PROJECT TOOLS ---------- */
+
+    .project-tools{
+        margin-top:60px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:25px;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:none;
+    }
+
+
+    /* ---------- PROJECT GRID ---------- */
+
+    .project-grid{
+        margin-top:35px;
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        gap:0;
+    }
+
+    .project,
+    .project:nth-child(1),
+    .project:nth-child(2),
+    .project:nth-child(3),
+    .project:nth-child(4),
+    .project:nth-child(5),
+    .project:nth-child(6),
+    .project:nth-child(7),
+    .project:nth-child(n){
+
+        grid-column:1 / -1;
+
+        min-height:220px;
+
+        padding:22px;
+    }
+
+    .project-name{
+        font-size:
+            clamp(27px,8vw,42px);
+        max-width:90%;
+    }
+
+    .project-number{
+        font-size:8px;
+    }
+
+    .project-arrow{
+        font-size:15px;
+    }
+
+
+    /* Disable large hover expansion on touch devices */
+
+    .project::before{
+        display:none;
+    }
+
+    .project:hover{
+        background:transparent;
+        color:inherit;
+    }
+
+    .project:hover .project-name{
+        transform:none;
+    }
+
+    .project:hover .project-arrow{
+        transform:none;
+    }
+
+
+    /* ---------- GENERAL TEXT ---------- */
+
+    p{
+        max-width:100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px){
+
+    .nav{
+        padding:
+            17px 5vw;
+    }
+
+    .hero{
+        padding:
+            100px 5vw 30px;
+    }
+
+    .hero-title{
+        font-size:
+            clamp(55px,18vw,88px);
+    }
+
+    .hero-indent{
+        margin-left:5vw;
+    }
+
+    .section{
+        padding:
+            70px 5vw;
+    }
+
+    .about-title{
+        font-size:
+            clamp(52px,17vw,82px);
+    }
+
+    .about-main{
+        font-size:
+            clamp(25px,7.5vw,35px);
+    }
+
+    .about-stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .photo{
+        aspect-ratio:3/4;
+    }
+
+    .skills-heading{
+        font-size:
+            clamp(58px,18vw,85px);
+    }
+
+    .projects-title{
+        font-size:
+            clamp(58px,18vw,88px);
+    }
+
+    .project{
+        min-height:200px !important;
+        padding:18px !important;
+    }
+
+    .project-name{
+        font-size:
+            clamp(25px,8vw,35px);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px){
+
+    .hero-title{
+        font-size:54px;
+    }
+
+    .about-title{
+        font-size:50px;
+    }
+
+    .skills-heading{
+        font-size:55px;
+    }
+
+    .projects-title{
+        font-size:55px;
+    }
+
+    .about-stats{
+        grid-template-columns:1fr;
+    }
+
+    .stat{
+        border-bottom:
+            1px solid var(--line-dark);
+    }
+
+}
 /* =========================================================
    NAVIGATION
 ========================================================= */
